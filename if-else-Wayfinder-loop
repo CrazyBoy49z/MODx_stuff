@@ -1,0 +1,25 @@
+______________________________________________________________________________________
+menu:
+
+
+[[!Wayfinder?
+        &sortBy=`menuindex`
+        &startId=`0`
+        &level=`3`
+        &outerTpl=`OuterTplHeader`
+        &rowTpl=`InnerTplHeader`
+        &innerRowTpl=`InnerListTplHeader`
+        &innerTpl=`OuterListTplHeader`
+    ]]
+______________________________________________________________________________________    
+InnerTplHeader:
+
+
+<li[[+wf.classes]]>[[+wf.docid:is=`2`:then=`
+<a class="effect-3">[[+wf.linktext]]</a>
+`:else=`
+<a href="[[+wf.link]]" class="effect-3">[[+wf.linktext]]</a>
+`]]
+[[+wf.wrapper]]
+</li>
+    
