@@ -1,0 +1,16 @@
+<?php
+if($resource->get('template')==12){
+    $img=$resource->getTVValue('Preview');
+    // $i=substr($img,strpos($img,'.'));
+    // $modx->log(1,$i);
+    if($img && strtolower(substr($img,strpos($img,'.')))=='.png'){
+        $new_img=$modx->runSnippet('pthumb',array('input'=>$img,'options'=>'f=jpeg'));
+    }
+    if($new_img){
+        if(copy(MODX_BASE_PATH.$new_img,MODX_BASE_PATH.str_replace('.png','.jpg',$img))){
+            $new_img=str_replace('.png','.jpg',$img);
+            $resource->setTVValue('Preview',$new_img);
+            $resource->save();
+        }
+    }
+}
