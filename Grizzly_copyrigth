@@ -1,11 +1,9 @@
 /*=============================HTML=============================*/
 <div class="sitescript">
-    <div class="container">
         <a href="https://grizzly.by/" class="right_link">
             <img class="grizlogo" src="assets/templates/css/source/Grizzly_logo.png" alt="Grizzly.by">
             <span class="hover_something">Создание и продвижение сайтов</span>
         </a>
-    </div>
 </div>
 /*=============================CSS=============================*/
 /* sitescript */
