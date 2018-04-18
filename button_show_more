@@ -1,0 +1,17 @@
+
+template code:
+[[getButton?&limit=`6`]]
+
+///////////////////////////////////////////////////////
+snippet code:
+<?php
+$limit;
+$ress = $modx->getIterator('modResource', array('parent' =>10, "published" => 1) );
+$i=0;
+foreach ($ress as $res){
+    $i++;
+}
+if ($i > $limit) return "<div class='btn-more'>
+                <a class='read' id='add-more' data-docid='[[*id]]'>Показать еще</a>
+            </div>";
+else return "";
